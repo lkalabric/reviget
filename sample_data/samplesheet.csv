@@ -1,2 +1,2 @@
 Study,Sample,Library,Attempt,R1,R2,Flowcell,Lane,Index Sequence
-Study_Name,S0001,1,1,/contet/drive/sample_data/2E1_S2_L001_R1_001.fastq.gz,/contet/drive/sample_data/2E1_S2_L001_R1_002.fastq.gz,1,1,1
+Study_Name,S0001,1,1,/content/drive/sample_data/2E1_S2_L001_R1_001.fastq.gz,/content/drive/sample_data/2E1_S2_L001_R1_002.fastq.gz,1,1,1

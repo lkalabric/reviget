@@ -1,0 +1,3 @@
+input_samplesheet: "/content/drive/sample_data/samplesheet.csv"
+only_validate_fastqs: true
+conda_envs_location: "/usr/local/envs/"

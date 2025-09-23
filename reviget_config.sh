@@ -34,3 +34,9 @@ else
         exit 1
     fi
 fi
+
+# Atualização do Java
+echo "Atualizando o Java no ambiente Conda reviget..."
+conda activate reviget
+conda update openjdk
+java -version

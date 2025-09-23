@@ -1,8 +1,5 @@
 # --- Instala o repositório Conda e seus pacotes ---
 
-
-
-
 # --- Configurações do ambiente e instalação dos pacotes requeridos ---
 # Defina o nome do ambiente Conda que você quer verificar/criar
 # Exemplo: ENV_NAME="reviget"

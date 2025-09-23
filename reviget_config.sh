@@ -26,7 +26,7 @@ else
     # O comando 'conda create' cria o ambiente.
     # O '-y' (yes) aceita todas as confirmações automaticamente.
     # Adicionado o canal bioconda para encontrar os pacotes de bioinformática
-    if conda create --name "$ENV_NAME" $PYTHON_VERSION $PACKAGES -c bioconda -c conda-forge -y; then
+    if conda create --name $ENV_NAME $PYTHON_VERSION $PACKAGES -c bioconda -c conda-forge -y; then
         echo "Sucesso: O ambiente '$ENV_NAME' foi criado com sucesso!"
     else
         echo "Erro: Falha ao criar o ambiente '$ENV_NAME'. Verifique as permissões ou a instalação do Conda."

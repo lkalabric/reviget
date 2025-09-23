@@ -10,7 +10,7 @@ ENV_NAME="reviget"
 PYTHON_VERSION="python=3.8.8"
 
 # Exemplo: PACKAGES="fastqc trimmomatic spades velvet"
-PACKAGES="fastqc trimmomatic cutadapt spades velvet"
+PACKAGES="fastqc trimmomatic cutadapt spades velvet iqtree itol-config bwa"
 
 # --- Lógica do Script ---
 echo "Verificando a existência do ambiente Conda: '$ENV_NAME'..."

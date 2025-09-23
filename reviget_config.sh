@@ -40,3 +40,11 @@ echo "Atualizando o Java no ambiente Conda reviget..."
 conda activate reviget
 conda update openjdk
 java -version
+
+# Change back to the parent directory before copying
+cd 
+
+# Copy the csv files from the cloned repository to the sample_data folder
+echo "Copiando arquivos do repositório clonado para a pasta sample_data..."
+cp repos/reviget/sample_data/* examples/reviget
+

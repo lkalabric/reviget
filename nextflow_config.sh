@@ -7,7 +7,7 @@ mv nextflow bin/
 nextflow info
 
 # --- Atualização para a versão mais nova do pacote Nextflow ---
-if sudo nextflow self-update; then
+if nextflow self-update; then
     echo "Atualizando Nextflow para a versão mais recente..."
   else
    echo "Nextflow atualizado!"

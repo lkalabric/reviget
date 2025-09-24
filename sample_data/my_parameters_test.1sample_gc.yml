@@ -1,2 +1,2 @@
-input_samplesheet: /content/repos/reviget/test.1sample_gc.csv
+input_samplesheet: /content/repos/reviget/samplesheet_test.1sample_gc.csv
 conda_envs_location: /root/miniconda3/envs

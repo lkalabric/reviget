@@ -1,0 +1,3 @@
+input_samplesheet: ~/examples/reviget/test.3samples.csv
+only_validate_fastqs: true
+conda_envs_location: ~/miniconda3/envs/

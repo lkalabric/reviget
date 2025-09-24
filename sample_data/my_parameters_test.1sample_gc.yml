@@ -1,3 +1,2 @@
 input_samplesheet: /content/repos/reviget/test.1sample_gc.csv
-only_validate_fastqs: true
 conda_envs_location: /root/miniconda3/envs

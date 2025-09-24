@@ -1,3 +1,0 @@
-input_samplesheet: examples/reviget/samplesheet.csv
-only_validate_fastqs: true
-conda_envs_location: /home/kalabric/miniconda3/envs/

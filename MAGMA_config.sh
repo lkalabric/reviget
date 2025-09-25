@@ -1,13 +1,14 @@
 #!/usr/bin/bash
 
+# --- Running MAGMA using conda
+
 # --- Pré-requisitos
 # Java
 java_config.sh
-
 # Nextflow
 nextflow_config.sh
 
-# --- Running MAGMA using conda
+
 # Download dos arquivos de configuração do MAGMA
 wget https://raw.githubusercontent.com/TORCH-Consortium/MAGMA/master/conda_envs/magma-env-1.yml
 # Erro: O pacote gtak4 sugerido no recipe magma-env-1.yml não é compatível com Java 17 ou superior.
@@ -20,7 +21,7 @@ wget https://raw.githubusercontent.com/TORCH-Consortium/MAGMA/master/conda_envs/
 wget https://raw.githubusercontent.com/TORCH-Consortium/MAGMA/master/conda_envs/magma-ntmprofiler-env.yml
 
 
-# Configurar criar cada ambiente individualmente
+# Configuração de cada ambiente MAGMA individualmente
 conda env create -n magma-env-1 --file magma-env-1.yml
 conda env create -n magma-env-2 --file magma-env-2.yml
 # Erro: Alguns arquivo tem extensão .yml são descritos como .yaml. Vamos manter tudo como .yml...
@@ -36,3 +37,6 @@ conda env create -n magma-ntmprofiler-env --file magma-ntmprofiler-env.yml
 wget -O examples/reviget/resistance_db_who_v1.zip https://github.com/TORCH-Consortium/MAGMA/files/14559680/resistance_db_who_v1.zip
 cd examples/reviget/
 unzip resistance_db_who_v1.zip
+conda activate magma-tbprofiler-env
+tb-profiler update_tbdb --commit 30f8bc37df15affa378ebbfbd3e1eb4c5903056e --logging DEBUG
+

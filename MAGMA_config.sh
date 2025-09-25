@@ -1,7 +1,13 @@
 #!/usr/bin/bash
 
-# --- Running MAGMA using conda
+# --- Pré-requisitos
+# Java
+java_config.sh
 
+# Nextflow
+nextflow_config.sh
+
+# --- Running MAGMA using conda
 # Download dos arquivos de configuração do MAGMA
 wget https://raw.githubusercontent.com/TORCH-Consortium/MAGMA/master/conda_envs/magma-env-1.yml
 wget https://raw.githubusercontent.com/TORCH-Consortium/MAGMA/master/conda_envs/magma-env-2.yml

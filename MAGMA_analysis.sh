@@ -11,7 +11,7 @@ exit 0;
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
          -profile conda_local, server \
          -r v2.2.2 \
-         -params-file examples/regivet/my_parameters_test.1sample.yml
+         -params-file examples/reviget/my_parameters_test.1sample.yml
 
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
          -profile conda_local, server \

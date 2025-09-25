@@ -2,8 +2,8 @@
 
 # --- Pipeline setup sanity check ---
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
-         -profile test,conda_local,server \
-         -r v2.2.0
+         -profile test \
+         -r v2.2.2
       
 exit 0;
 
@@ -11,7 +11,7 @@ exit 0;
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
          -profile conda_local, server \
          -r v2.2.2 \
-         -params-file examples/regivet/my_parameters_test.yml
+         -params-file examples/regivet/my_parameters_test.1sample.yml
 
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
          -profile conda_local, server \

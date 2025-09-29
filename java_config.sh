@@ -27,7 +27,7 @@ else
 fi
 
 # 4. Comparar a versão detectada com a versão 11
-if (( MAJOR_VERSION < 11 )); then
+if (( MAJOR_VERSION <= 11 )); then
     echo "A versão do Java ($MAJOR_VERSION) é inferior a 11. Iniciando a instalação do OpenJDK 21..."
     
     # --- Se for um sistema baseado em Debian/Ubuntu (APT) ---

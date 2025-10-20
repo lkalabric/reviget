@@ -20,7 +20,7 @@ ENV_NAME="quanttb"
 PYTHON_VERSION="python=3.8.8"
 
 # Exemplo: PACKAGES="fastqc trimmomatic spades velvet"
-PACKAGES="bwa samtools"
+PACKAGES="bwa samtools quanttb"
 
 # --- Lógica do Script ---
 echo "Verificando a existência do ambiente Conda: '$ENV_NAME'..."
@@ -50,3 +50,11 @@ echo "Atualizando o Java no ambiente Conda reviget..."
 conda activate $ENV_NAME
 conda update openjdk
 java -version
+
+# Instalação do QuantTb
+# wget -O quanttb-1.01.tar.gz https://github.com/AbeelLab/quanttb/archive/refs/tags/1.01.tar.gz
+# tar -zxvf quanttb-1.01.tar.gz
+# cd quanttb-1.01
+# sudo python setup.py install
+
+

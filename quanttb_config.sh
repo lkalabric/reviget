@@ -17,7 +17,7 @@ ENV_NAME="quanttb"
 
 # Defina as bibliotecas que você quer instalar, se o ambiente for criado
 # Exemplo: PYTHON_VERSION="python=3.9"
-PYTHON_VERSION="python=3.8.8"
+PYTHON_VERSION="python=2.2.0"
 
 # Exemplo: PACKAGES="fastqc trimmomatic spades velvet"
 PACKAGES="bwa samtools quanttb"

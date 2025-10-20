@@ -20,7 +20,7 @@ ENV_NAME="quanttb"
 PYTHON_VERSION="python=2.7"
 
 # Exemplo: PACKAGES="fastqc trimmomatic spades velvet"
-PACKAGES="bwa samtools quanttb"
+PACKAGES="bwa samtools"
 
 # --- Lógica do Script ---
 echo "Verificando a existência do ambiente Conda: '$ENV_NAME'..."
@@ -52,9 +52,14 @@ conda update openjdk
 java -version
 
 # Instalação do QuantTb
-# wget -O quanttb-1.01.tar.gz https://github.com/AbeelLab/quanttb/archive/refs/tags/1.01.tar.gz
-# tar -zxvf quanttb-1.01.tar.gz
-# cd quanttb-1.01
-# sudo python setup.py install
+sudo apt install build-essential # Instala o Compilador C
+wget -O quanttb-1.01.tar.gz https://github.com/AbeelLab/quanttb/archive/refs/tags/1.01.tar.gz
+tar -zxvf quanttb-1.01.tar.gz
+cd quanttb-1.01
+sudo python setup.py install
+
+# Classify a sample from the example data with the default database and save results to results.txt
+cd magma-data
+quanttb quant -f SRR26331590_1.fastq.gz SRR26331590_2.fastq.gz -o myresults.quanttb.txt
 
 

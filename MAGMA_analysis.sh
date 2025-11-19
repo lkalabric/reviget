@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+# Download dos containers MAGMA para execução do docker
+docker pull ghcr.io/torch-consortium/magma/magma-container-1:1.1.1
+docker pull ghcr.io/torch-consortium/magma/magma-container-2:1.1.1
+
+
 # --- Pipeline setup sanity check ---
 # Na Fiocruz isso não roda por conta do acesso a internet tanto na rede corporativa quanto na rede wifi (independente da rede)
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
@@ -10,18 +15,18 @@ exit 0;
 
 # --- Análise dos dados de teste localmente ---
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
-         -profile docker,laptop \
+         -profile docker,low_memory \
          -r v2.2.2 \
          -params-file examples/reviget/my_parameters_1_local.yml
 
 nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
-         -profile docker,laptop \
+         -profile docker,low_memory \
          -r v2.2.2 \
          -params-file examples/reviget/my_parameters_3_local.yml
 
 # --- Análise dos dados de teste remotamente ---
 # Na Fiocruz isso não roda por conta do acesso a internet 
          nextflow run 'https://github.com/TORCH-Consortium/MAGMA' \
-         -profile docker,laptop \
+         -profile docker,low_memory \
          -r v2.2.2 \
          -params-file examples/reviget/my_parameters_3_remote.yml
